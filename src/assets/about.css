@@ -1,0 +1,133 @@
+body{
+    --c-bg-color: #FAFDFF;
+    --c-secondary-bg-color: #c8c9cb;
+    /* --c-tertiary-bg-color: #00053b; */
+    --c-tertiary-bg-color: #0c1e3c;
+    --c-text-color: #0c1727;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--c-bg-color);
+}
+.c-main-grid{
+    display: grid;
+    padding: 5vh 5vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5%;
+    align-content: center;
+}
+.c-sub-grid{
+    display: grid;
+    grid-template-columns: 1fr 5% 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.p1-container{
+    display: flex;
+}
+.p2-container{
+    display: flex;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+.p2-container p{
+    align-self: flex-start;
+}
+p{
+    font-family: 'PT Mono', monospace;
+    align-self: flex-end;
+    text-align: justify;
+    text-indent: 20%;
+    padding: 5%;
+    width: 50%;
+    color: var(--c-text-color);
+    font-size: 1.3vh;
+}
+.blurb1{
+    margin-right: 5%;
+}
+.top-right-bg{
+    grid-column: 3 / 4;
+    background-image: url('./wyescatter1.svg');
+    background-size: contain;
+}
+.personal-imgs{
+    background-color: var(--c-tertiary-bg-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 15%;
+    width: 80%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+}
+.personal-imgs img{
+    max-height: 60vh;
+    padding: 5%;
+    border-radius: 5%;
+}
+.personal-imgs img::after{
+    box-shadow: inset 0px 0px 15px 35px rgba(12,30,60,1);
+}
+.personal-imgs img:nth-of-type(1){
+    justify-self: right;
+}
+.personal-imgs img:nth-of-type(2){
+    grid-row: 2 / 4;
+    grid-column: 2;
+}
+.p-backdrop{
+    background-color: var(--c-secondary-bg-color);
+}
+.accent-letter-container{
+    position: absolute;
+    display: flex;
+    background-size: contain;
+    width: 100px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-color: #12223b;
+    outline-offset: 5px;
+    border-radius: 50%;
+    margin-left: 25vw;
+    margin-top: 6vh
+}
+.accent-letter-container h3{
+    font-family: 'PT Mono', monospace;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    color: #e5f0fd;
+}
+@media screen and (max-width: 1000px) {
+    .c-main-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .p2-container{
+        grid-row: auto;
+    }
+    .personal-blurb{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .accent-letter-container{
+        width: 50px;
+        height: 30px;
+        margin-left: 50vw;
+        margin-top: 3vh;
+    }
+    .accent-letter-container h3{
+        font-size: 1em;
+    }
+    .p2-container{
+        grid-column: auto;
+    }
+    p{
+        font-size: 1.25vh;
+    }
+}

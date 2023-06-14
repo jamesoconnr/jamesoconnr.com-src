@@ -1,0 +1,12 @@
+:root{
+  --bg-color: #FFFFFF;
+  --secondary-bg-color: #fdfeff;
+  --border-color: #08220e;
+  --nav-width: 10%
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}

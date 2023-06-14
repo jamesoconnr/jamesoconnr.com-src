@@ -1,0 +1,20 @@
+a, h1, h2{
+    font-family: 'PT Mono', monospace;
+    font-weight: 400;
+    color: black;
+}
+.c-main-flex{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+.c-main-flex *{
+    margin: 0;
+}
+.c-main-flex img{
+    height: 60px;
+}

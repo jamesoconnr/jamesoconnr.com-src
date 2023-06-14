@@ -1,0 +1,50 @@
+<template>
+<main class="w-main-flex">
+   <div @click="rotateBGClick()" id="bg" class="svg-bg">
+        <svg
+           width="98.132004mm"
+           height="98.132004mm"
+           viewBox="0 0 98.132004 98.132004"
+           xmlns="http://www.w3.org/2000/svg">
+           <g
+           transform="translate(-60.871758,-74.462486)">
+           <path
+                d="m 155.96901,123.52849 c 0,3.17779 3.61897,6.82186 2.95293,10.07674 -0.66605,3.25488 -5.40564,5.08715 -6.5703,7.8407 -1.16465,2.75356 0.84398,7.37802 -0.95309,10.03804 -1.79708,2.66001 -6.82928,2.51102 -8.91178,4.59353 -2.08251,2.0825 -1.93352,7.1147 -4.59353,8.91178 -2.66002,1.79707 -7.28448,-0.21156 -10.03804,0.95309 -2.75355,1.16466 -4.58582,5.90425 -7.8407,6.5703 -3.25488,0.66604 -6.89895,-2.95293 -10.07674,-2.95293 -3.1778,0 -6.82186,3.61897 -10.076744,2.95293 -3.25488,-0.66605 -5.087145,-5.40564 -7.840696,-6.5703 -2.753552,-1.16465 -7.378019,0.84398 -10.038036,-0.95309 -2.660017,-1.79708 -2.51103,-6.82928 -4.593534,-8.91178 -2.082504,-2.08251 -7.114704,-1.93352 -8.911776,-4.59353 -1.797072,-2.66002 0.211553,-7.28448 -0.953101,-10.03804 -1.164654,-2.75355 -5.904247,-4.58582 -6.570292,-7.8407 -0.666044,-3.25488 2.952928,-6.89895 2.952928,-10.07674 0,-3.1778 -3.618972,-6.82186 -2.952928,-10.07674 0.666045,-3.25488 5.405638,-5.08715 6.570292,-7.8407 1.164654,-2.75356 -0.843972,-7.378019 0.953101,-10.038037 1.797072,-2.660017 6.829272,-2.51103 8.911776,-4.593534 2.082504,-2.082504 1.933516,-7.114704 4.593534,-8.911776 2.660017,-1.797073 7.284484,0.211553 10.038036,-0.953101 2.753551,-1.164654 4.585816,-5.904247 7.840696,-6.570292 3.254884,-0.666045 6.898944,2.952928 10.076744,2.952928 3.17779,0 6.82186,-3.618972 10.07674,-2.952927 3.25488,0.666044 5.08715,5.405637 7.8407,6.570291 2.75356,1.164654 7.37802,-0.843971 10.03804,0.953101 2.66001,1.797073 2.51102,6.829273 4.59353,8.911777 2.0825,2.082504 7.1147,1.933516 8.91178,4.593534 1.79707,2.660017 -0.21156,7.284476 0.95309,10.038036 1.16466,2.75355 5.90425,4.58582 6.5703,7.8407 0.66604,3.25488 -2.95293,6.89894 -2.95293,10.07674 z"
+                sodipodi:nodetypes="sssssssssssssssssssssssssssssssss" />
+          </g>
+        </svg>
+
+    </div>
+    <h1>Hi, i'm James O'Connor!</h1>
+    <h2>This is my personal website, made in VueJS</h2>
+    <a href="https://github.com/jamesoconnr"><img src="../assets/github-mark.svg"></a>
+</main>
+
+</template>
+<script setup>
+let transform = 'transform 1s ease-in-out'
+
+if (window.innerWidth < 800){ transform = ''}
+
+const rotateBGClick = () => {
+    let element = document.querySelector("#bg")
+    element.style.setProperty('--svg-rotate', '180deg')
+    element.style.setProperty('--svg-transition', transform)
+}
+if (window.innerWidth > 800) {
+    document.addEventListener("mousemove", (e) => {
+        rotateBG(e, document.querySelector("#bg"))
+    })
+    const rotateBG = (event, element) => {
+        let x = event.clientX
+        let y = event.clientY
+        let middleX = (window.innerWidth * 1.1)/ 2
+        let middleY = window.innerHeight / 2
+        let offsetX = (x- middleX)
+        let offsetY = (y- middleY)
+        let angle = Math.atan2(offsetY, offsetX)
+        let rotation = angle * (180 / Math.PI)
+        element.style.setProperty('--svg-rotate', rotation + 'deg')
+}}
+</script>
+<style src="../assets/welcome.css" scoped></style>
