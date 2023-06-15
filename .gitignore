@@ -29,3 +29,5 @@ coverage
 *.sw?
 
 #Large Images, project files, etc.
+
+distREADME.md

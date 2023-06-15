@@ -1,29 +1,9 @@
-# jamesoconnor.dev
+# [jamesoconnr.com](https://jamesoconnr.com/)
+This is the source repo for my personal website, made in VueJS. Build repo can be found [here](https://github.com/jamesoconnr/jamesoconnr.com).
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+### To-Do List
+- Mobile optimizations
+    - Make Panopticon work on mobile.
+    - Add some sort animation to landing page, similar to desktop animation.
+- Stop rotation animation from running on all pages.
+- More samples/polish samples more
