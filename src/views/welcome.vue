@@ -21,7 +21,7 @@
 </main>
 
 </template>
-<script setup>
+<script scoped setup>
 let transform = 'transform 1s ease-in-out'
 
 if (window.innerWidth < 800){ transform = ''}

@@ -64,19 +64,17 @@ p{
     display: flex;
 }
 .personal-imgs img{
-    max-height: 60vh;
+    max-height: 50vh;
     padding: 5%;
-    border-radius: 5%;
+    opacity: 0;
 }
-.personal-imgs img::after{
-    box-shadow: inset 0px 0px 15px 35px rgba(12,30,60,1);
-}
-.personal-imgs img:nth-of-type(1){
-    justify-self: right;
-}
-.personal-imgs img:nth-of-type(2){
-    grid-row: 2 / 4;
-    grid-column: 2;
+.personal-img-container{
+    border-radius: 15%;
+    box-shadow: 0 0 15px 10px var(--c-tertiary-bg-color) inset;
+    background-image: url('../assets/SelfPortrait2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .p-backdrop{
     background-color: var(--c-secondary-bg-color);
@@ -107,6 +105,7 @@ p{
     .c-main-grid{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
+        align-content: unset;
     }
     .p2-container{
         grid-row: auto;
@@ -118,7 +117,7 @@ p{
     .accent-letter-container{
         width: 50px;
         height: 30px;
-        margin-left: 50vw;
+        margin-left: calc(50% - 15px);
         margin-top: 3vh;
     }
     .accent-letter-container h3{
@@ -129,5 +128,11 @@ p{
     }
     p{
         font-size: 1.25vh;
+    }
+    .personal-imgs{
+        height: max-content;
+    }
+    .personal-imgs img {
+        height: 40svh;
     }
 }

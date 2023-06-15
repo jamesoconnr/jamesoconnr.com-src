@@ -11,4 +11,4 @@
 </main>
 </template>
 
-<style src='../assets/contact.scss' lang="scss"></style>
+<style scoped src='../assets/contact.scss' lang="scss"></style>

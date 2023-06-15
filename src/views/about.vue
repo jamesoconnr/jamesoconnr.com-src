@@ -16,7 +16,9 @@
             </div>
         </div>
         <div class="personal-imgs">
-            <img src="@/assets/SelfPortrait.png" alt="">
+            <div class="personal-img-container">
+            <img src="@/assets/SelfPortrait2.png" alt="">
+            </div>
         </div>
     </main>
     </body>
