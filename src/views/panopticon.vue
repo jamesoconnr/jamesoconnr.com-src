@@ -21,10 +21,10 @@ const scrollUp = () => {
     <body>
        <main class="p-main-grid">
             <div class="p-title-block bottom right"><h1>jamesoconnr</h1></div>
-            <div class="right bottom two-col">
+            <div class="right bottom two-col mobile-hide">
                 <!-- <span @click="scrollUp" class="material-symbols-sharp">expand_less</span> -->
             </div>
-            <div class="bottom"></div>
+            <div class="bottom mobile-hide"></div>
             <div class="p-focus three-col two-row right bottom">
                 <div class="p-focus-flex">
                     <img :src=CurrentImg.src :alt=CurrentImg.alt >
@@ -35,19 +35,13 @@ const scrollUp = () => {
                 </div>
             </div>
             <div class="bottom right two-col two-row">
-                <swiper
-                :loop = true
-                >
-                    <swiper-slide>
-                        <div class="p-content-grid">    
-                            <img v-for="img in GridImages" @click="SetCurrentImg(GridImages.indexOf(img))" :src=img.src :alt=img.alt class="p-grid-img focused-img">
-                        </div>
-                    </swiper-slide>
-                </swiper>
+                <div class="p-content-grid">    
+                    <img v-for="img in GridImages" @click="SetCurrentImg(GridImages.indexOf(img))" :src=img.src :alt=img.alt class="p-grid-img focused-img">
+                </div>
             </div>
-            <div class="bottom two-row"></div>
-            <div class="right three-col"></div>
-            <div class="two-col right"></div>
+            <div class="bottom two-row mobile-hide"></div>
+            <div class="right three-col mobile-hide"></div>
+            <div class="two-col right mobile-hide"></div>
         </main> 
     </body>
 </template>

@@ -19,10 +19,10 @@ main{
 }
 .dropdown-options{
     border: 2px solid #020f05;
-    /**/
     background-color: var(--dropdown-bg-color);
     padding: 0 5px 0 5px;
     position: absolute;
+    padding-left: 1em;
 }
 .app-main-grid{
     overflow: hidden;
@@ -87,9 +87,9 @@ main{
 @media screen and (max-width: 500px) {
     .vertical-nav{
         flex-direction: row;
-        padding-bottom: 0;
+        padding: 0 5% 0;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         border-right: none;
         border-bottom: 1px solid var(--border-color);
     }
@@ -103,6 +103,9 @@ main{
     .vertical-nav h2{    
         font-size: .75em;
     }
+    .vertical-nav h2:not(.samples-dropdown){    
+        text-decoration: underline 1px;
+    }
     .name-container{
         margin-top: 0;
     }
@@ -113,8 +116,10 @@ main{
     .dropdown-options{
         border: 2px solid #020f05;
         right: 2px;
+        text-decoration: underline 1px;
     }
     .app-main-grid{
         overflow-y: visible;
     }
 }
+

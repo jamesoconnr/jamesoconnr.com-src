@@ -1,6 +1,6 @@
 <template>
 <main class="w-main-flex">
-   <div @click="rotateBGClick()" id="bg" class="svg-bg">
+   <svgBG>
         <svg
            width="98.132004mm"
            height="98.132004mm"
@@ -14,37 +14,15 @@
           </g>
         </svg>
 
-    </div>
+    </svgBG>
     <h1>Hi, i'm James O'Connor!</h1>
-    <h2>This is my personal website, made in VueJS</h2>
     <a href="https://github.com/jamesoconnr"><img src="../assets/github-mark.svg"></a>
+    <a href="https://github.com/jamesoconnr/jamesoconnr.com-src">src for this site</a>
 </main>
 
 </template>
 <script scoped setup>
-let transform = 'transform 1s ease-in-out'
+import svgBG from '../components/svgBG.vue'
 
-if (window.innerWidth < 800){ transform = ''}
-
-const rotateBGClick = () => {
-    let element = document.querySelector("#bg")
-    element.style.setProperty('--svg-rotate', '180deg')
-    element.style.setProperty('--svg-transition', transform)
-}
-if (window.innerWidth > 800) {
-    document.addEventListener("mousemove", (e) => {
-        rotateBG(e, document.querySelector("#bg"))
-    })
-    const rotateBG = (event, element) => {
-        let x = event.clientX
-        let y = event.clientY
-        let middleX = (window.innerWidth * 1.1)/ 2
-        let middleY = window.innerHeight / 2
-        let offsetX = (x- middleX)
-        let offsetY = (y- middleY)
-        let angle = Math.atan2(offsetY, offsetX)
-        let rotation = angle * (180 / Math.PI)
-        element.style.setProperty('--svg-rotate', rotation + 'deg')
-}}
 </script>
 <style src="../assets/welcome.css" scoped></style>

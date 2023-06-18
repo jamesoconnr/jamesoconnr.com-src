@@ -1,3 +1,6 @@
+*{
+    overflow: hidden;
+}
 a, h1, h2{
     font-family: 'PT Mono', monospace;
     font-weight: 400;
@@ -18,4 +21,8 @@ a, h1, h2{
 }
 .c-main-flex img{
     height: 60px;
+}
+.c-main-flex *:not(.svg-bg){
+    margin: 0;
+    z-index: 3;
 }

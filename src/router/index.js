@@ -5,6 +5,7 @@ import PanopticonView from '../views/panopticon.vue'
 import AboutView from '../views/about.vue'
 import WelcomeView from '../views/welcome.vue'
 import ContactView from '../views/contact.vue'
+import BlogHomeView from '../views/bloghome.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -33,6 +34,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: ContactView
+    },
+    {
+      path: '/blog',
+      name: 'bloghome',
+      component: BlogHomeView
     },
   ]
 })

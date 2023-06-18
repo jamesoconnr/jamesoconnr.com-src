@@ -1,0 +1,11 @@
+.coming-soon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    h2{
+        font-family: 'PT Mono', monospace;
+        font-weight: 400;
+        text-align: center;
+    }
+}

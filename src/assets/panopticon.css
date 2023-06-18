@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
-@import '@splidejs/vue-splide/css';
 body{
     --p-bg-color: #fff6f6;
     --p-secondary-color: #c55e5e;
@@ -80,6 +79,7 @@ body{
     height: 100%;
     object-fit: cover;
     max-height: 12vh; 
+    transition: .2s ease-in-out
 }
 .p-grid-img.focused-img:hover{
     transform: scale(.95);
@@ -101,7 +101,8 @@ body{
 }
 .p-focus-flex img{
     height: 80%;
-    box-shadow: 1px 1px 5px #302f2f;
+    filter: drop-shadow(1px 1px 5px #302f2f);
+    object-fit: contain;
 }
 .p-focus-flex h2{
     font-family: 'Syne';
@@ -136,8 +137,8 @@ body{
     transform: translateY(--unfocused-translateY);
 }
 .p-grid-img.unfocused-img{
-    max-height: 8vh;
-    max-width: 33vw;
+    max-height: 8svh;
+    max-width: 33svw;
     filter: opacity(30%);
 }
 .unfocused-grid-container{
@@ -150,5 +151,49 @@ body{
     }
     .p-focus-flex p{
         font-size: .75em;
+    }
+}
+@media screen and (max-width: 800px) {
+    .mobile-hide{
+        display: none;
+    }
+    .p-main-grid{
+        grid-template-columns: 10% 1fr 10%;
+        grid-template-rows: 10% 1fr 1fr;
+    }
+    .p-main-grid > *{
+        border: var(--border);
+    }
+    .p-title-block{
+        justify-content: center;
+    }
+    .p-title-block h1{
+        margin-right: 0px;
+        font-style: normal;
+        font-size: 2em;
+    }
+    .p-focus{
+        display: flex;
+        border-bottom: 0;
+        border-top: 0;
+    }
+    .p-focus-flex{
+        height: max-content;
+        align-self: center;
+        padding: 7%;
+
+    }
+    .p-focus-flex h2{
+        font-size: 1.25em;
+    }
+    .p-focus-flex img{
+        max-width: 40%;
+    }
+    /* terrible solution below, targets the img grid*/
+    .bottom.right.two-col.two-row{
+        grid-column: auto / span 3;
+    }
+    .two-row{
+        grid-row: unset;
     }
 }

@@ -70,7 +70,7 @@ p{
 }
 .personal-img-container{
     border-radius: 15%;
-    box-shadow: 0 0 15px 10px var(--c-tertiary-bg-color) inset;
+    box-shadow: 0 0 15px 1px var(--c-tertiary-bg-color) inset;
     background-image: url('../assets/SelfPortrait2.png');
     background-size: contain;
     background-repeat: no-repeat;
