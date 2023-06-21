@@ -1,9 +1,14 @@
 <script setup>
-
 let transform = 'transform 1s ease-in-out'
 let rotation = 0
+let validPage = true
+/*terrible solution here, but it works*/
+console.log()
 
 if (window.innerWidth > 800) {
+    window.addEventListener("load", (event) => {
+        console.log(document.querySelector("#bg"));
+    });
     document.addEventListener("mousemove", (e) => {
         rotateBG(e, document.querySelector("#bg"))
     })
@@ -27,7 +32,6 @@ const rotateBGClick = () => {
     }
 }
 const routerView = document.getElementById('routerView')
-
 routerView.addEventListener('click', rotateBGClick)
 </script>
 

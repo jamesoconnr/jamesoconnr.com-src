@@ -17,7 +17,6 @@ if (window.innerWidth < 500) {
 </script>
 
 <template>
-
 <main class="app-main-grid">
   <div class="vertical-nav">
     <div class="name-container">

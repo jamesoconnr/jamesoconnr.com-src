@@ -16,7 +16,7 @@
 
     </svgBG>
     <h1>Hi, i'm James O'Connor!</h1>
-    <a href="https://github.com/jamesoconnr"><img src="../assets/github-mark.svg"></a>
+    <a class="github-link" href="https://github.com/jamesoconnr"><img src="../assets/github-mark.svg"></a>
     <a href="https://github.com/jamesoconnr/jamesoconnr.com-src">src for this site</a>
 </main>
 
@@ -25,4 +25,4 @@
 import svgBG from '../components/svgBG.vue'
 
 </script>
-<style src="../assets/welcome.css" scoped></style>
+<style src="../assets/welcome.scss" scoped></style>

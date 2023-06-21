@@ -28,9 +28,9 @@ main{
     overflow: hidden;
     background-color: var(--bg-color);
     display: grid;
-    height: 100vh;
+    height: 100svh;
     width: 100vw;
-    grid-template-columns: 10% 1fr;
+    grid-template-columns: var(--nav-width) 1fr;
 }
 .vertical-nav{
     background-color: var(--secondary-bg-color);

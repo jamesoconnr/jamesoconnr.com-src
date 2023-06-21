@@ -146,6 +146,9 @@ body{
     display: flex;
 }
 @media screen and (max-width: 1400px) {
+    .p-title-block h1{
+        font-size: 2em;
+    }
     .p-focus-flex h2{
         margin: 0;
     }
@@ -195,5 +198,8 @@ body{
     }
     .two-row{
         grid-row: unset;
+    }
+    .p-content-grid{
+        margin-bottom: 10%;
     }
 }
