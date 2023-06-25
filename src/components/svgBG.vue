@@ -5,7 +5,7 @@ let validPage = true
 /*terrible solution here, but it works*/
 console.log()
 
-if (window.innerWidth > 800) {
+if (window.innerWidth > 900) {
     window.addEventListener("load", (event) => {
         console.log(document.querySelector("#bg"));
     });
@@ -24,7 +24,7 @@ if (window.innerWidth > 800) {
         element.style.setProperty('--svg-rotate', rotation + 'deg')
 }}
 const rotateBGClick = () => {
-    if (window.innerWidth < 800){
+    if (window.innerWidth < 900){
     let element = document.querySelector("#bg")
     rotation = rotation + 180
     element.style.setProperty('--svg-rotate', rotation + 'deg')

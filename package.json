@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@splidejs/vue-splide": "^0.6.12",
+    "marked": "^5.1.0",
     "sass": "^1.62.1",
     "swiper": "^9.3.2",
     "three": "^0.152.2",

@@ -1,3 +1,4 @@
+/* coming soon screen */
 .coming-soon-container{
     display: flex;
     justify-content: center;
@@ -10,3 +11,20 @@
         text-align: center;
     }
 }
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* end of coming soon */
+h1, h2, h3, a, span, p, div{
+    font-family: 'PT Mono', monospace;
+    font-weight: 400;
+}
+.post-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 1em;
+}
+
