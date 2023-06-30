@@ -1,16 +1,15 @@
 <script setup>
 let transform = 'transform 1s ease-in-out'
 let rotation = 0
-let validPage = true
-/*terrible solution here, but it works*/
-console.log()
 
 if (window.innerWidth > 900) {
-    window.addEventListener("load", (event) => {
-        console.log(document.querySelector("#bg"));
-    });
     document.addEventListener("mousemove", (e) => {
-        rotateBG(e, document.querySelector("#bg"))
+        /* good solution? bad solution? idk, but it works */
+        try {
+            rotateBG(e, document.querySelector("#bg"))
+        } catch(error) {
+           /* left blank intentionally */ 
+        }
     })
     const rotateBG = (event, element) => {
         let x = event.clientX
@@ -22,7 +21,8 @@ if (window.innerWidth > 900) {
         let angle = Math.atan2(offsetY, offsetX)
         let rotation = angle * (180 / Math.PI)
         element.style.setProperty('--svg-rotate', rotation + 'deg')
-}}
+    }
+}
 const rotateBGClick = () => {
     if (window.innerWidth < 900){
     let element = document.querySelector("#bg")

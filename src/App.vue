@@ -14,6 +14,7 @@ if (window.innerWidth < 500) {
   const subHeading = document.getElementById('subHeading')
   subHeading.innerHTML = ''
   })}
+
 </script>
 
 <template>

@@ -21,7 +21,7 @@
 </main>
 
 </template>
-<script scoped setup>
+<script setup>
 import svgBG from '../components/svgBG.vue'
 
 </script>

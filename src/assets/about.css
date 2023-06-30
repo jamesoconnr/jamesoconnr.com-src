@@ -47,11 +47,6 @@ p{
 .blurb1{
     margin-right: 5%;
 }
-.top-right-bg{
-    grid-column: 3 / 4;
-    background-image: url('./wyescatter1.svg');
-    background-size: contain;
-}
 .personal-imgs{
     background-color: var(--c-tertiary-bg-color);
     align-items: center;
@@ -71,7 +66,7 @@ p{
 .personal-img-container{
     border-radius: 15%;
     box-shadow: 0 0 15px 1px var(--c-tertiary-bg-color) inset;
-    background-image: url('../assets/SelfPortrait2.png');
+    background-image: url('../assets/SelfPortrait2.avif');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

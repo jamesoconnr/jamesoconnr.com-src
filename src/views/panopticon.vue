@@ -22,7 +22,6 @@ const scrollUp = () => {
        <main class="p-main-grid">
             <div class="p-title-block bottom right"><h1>jamesoconnr</h1></div>
             <div class="right bottom two-col mobile-hide">
-                <!-- <span @click="scrollUp" class="material-symbols-sharp">expand_less</span> -->
             </div>
             <div class="bottom mobile-hide"></div>
             <div class="p-focus three-col two-row right bottom">
