@@ -5,9 +5,7 @@
 <main>
     <h1>jamesoconnr's blog</h1>
     <div class="post-container">
-        <blogpost num="a" title="test" date="Jun 23, 23" content="There are no blog posts here yet, but in the near future there will be. im just testing out formatting"/>
-        <blogpost num="b" title="test" date="Jun 23, 23" content="There are no blog posts here yet, but in the near future there will be. im just testing out formatting"/>
-        <blogpost num="c" title="test" date="Jun 23, 23" content="There are no blog posts here yet, but in the near future there will be. im just testing out formatting"/>
+        <blogpost postID="a" title="emigre (magazine)" date="Jul 1, 23" content='src/assets/blog/emigre.md'/>
     </div>
 </main>
 </template>
